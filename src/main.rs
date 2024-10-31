@@ -3,7 +3,7 @@ Rust script to use ETL and CRUD strategies on bad-drivers data
 using sqlite.
 */
 
-use analyze::{extract};
+use analyze::{extract, trans_load};
 use std::error::Error;
 
 fn main() -> Result<(), Box<dyn Error>> {
@@ -12,7 +12,9 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     let path = extract(URL, FILE_PATH)?;
     println!("[EXTRACT] Data extracted to csv file at path {}", path);
-    
+
+    let db_path = trans_load(&path)?;
+    println!("[TRANSFORM] Data transformed and loaded to sqlite db at path {}", db_path);
 
     Ok(())
 }

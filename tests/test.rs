@@ -10,3 +10,13 @@ fn test_extract() -> Result<(), Box<dyn std::error::Error>> {
 
     Ok(())
 }
+
+#[test]
+fn test_trans_load() -> Result<(), Box<dyn std::error::Error>> {
+    const FILE_PATH: &str = "data/bad-drivers.csv";
+
+    let db_path = trans_load(FILE_PATH)?;
+    assert_eq!(db_path, "data/badDrivers.db");
+
+    Ok(())
+}
