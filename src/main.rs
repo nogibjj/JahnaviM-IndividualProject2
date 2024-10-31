@@ -10,6 +10,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     const URL: &str = "https://raw.githubusercontent.com/fivethirtyeight/data/refs/heads/master/bad-drivers/bad-drivers.csv";
     const FILE_PATH: &str = "data/bad-drivers.csv";
 
-    extract(URL, FILE_PATH)?;
+    let path = extract(URL, FILE_PATH)?;
+    println!("[EXTRACT] Data extracted to csv file at path {}", path);
+    
+
     Ok(())
 }

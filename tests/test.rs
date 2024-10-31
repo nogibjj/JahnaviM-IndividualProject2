@@ -1,17 +1,12 @@
 use analyze::*;
-// use polars::prelude::*;
 
 #[test]
-fn test_read_csv() -> Result<(), Box<dyn std::error::Error>> {
-    let df = read_csv("data/bad-drivers.csv")?;
-    assert_eq!(df.width(), 8);
+fn test_extract() -> Result<(), Box<dyn std::error::Error>> {
+    const URL: &str = "https://raw.githubusercontent.com/fivethirtyeight/data/refs/heads/master/bad-drivers/bad-drivers.csv";
+    const FILE_PATH: &str = "data/bad-drivers.csv";
+
+    let path = extract(URL, FILE_PATH)?;
+    assert_eq!(path, "data/bad-drivers.csv");
+
     Ok(())
 }
-
-// #[test]
-// fn test_calculate_mean() -> Result<(), Box<dyn std::error::Error>> {
-//     let df = read_csv("data/bad-drivers.csv")?;
-//     let mean = calculate_mean(&df, "ins_loss")?.unwrap_or(0.0);
-//     assert_eq!(mean as i64, 134);
-//     Ok(())
-// }
