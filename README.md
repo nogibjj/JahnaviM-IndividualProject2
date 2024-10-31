@@ -2,8 +2,7 @@
 In this project I create a build system for both python and rust scripts. My scripts are identical in nature and both use polars to find the average insurance loss of the same dataset. I create these scripts to compare the proficiencies of both language in terms of duration and storage. This system creates a base feedback loop every time I update my project.
 
 ## CI/CD Badge
-[![CICD - Python](https://github.com/nogibjj/JahnaviM-PythonToRust/actions/workflows/cicd_python.yml/badge.svg)](https://github.com/nogibjj/JahnaviM-PythonToRust/actions/workflows/cicd_python.yml)
-[![CICD - Rust](https://github.com/nogibjj/JahnaviM-PythonToRust/actions/workflows/cicd_rust.yml/badge.svg)](https://github.com/nogibjj/JahnaviM-PythonToRust/actions/workflows/cicd_rust.yml)
+[![CICD](https://github.com/nogibjj/JahnaviM-IndividualProject2/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/JahnaviM-IndividualProject2/actions/workflows/cicd.yml)
 
 ## Instructions for Use
 To use this repository to generate the analysis follow the steps below:
