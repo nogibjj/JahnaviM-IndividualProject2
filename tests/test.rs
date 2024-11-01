@@ -20,3 +20,14 @@ fn test_trans_load() -> Result<(), Box<dyn std::error::Error>> {
 
     Ok(())
 }
+
+#[test]
+fn test_query() -> Result<(), Box<dyn std::error::Error>> {
+    const Q: &str = "SELECT drivers_count FROM badDrivers WHERE state = 'California';";
+    const R: &str = "drivers_count: 12\n";
+
+    let output = query(Q)?;
+    assert_eq!(output, R);
+
+    Ok(())
+}
