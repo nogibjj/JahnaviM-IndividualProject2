@@ -23,3 +23,6 @@ rs_run:
 
 rs_release:
 	cargo build --release
+
+rs_query:
+	cargo 

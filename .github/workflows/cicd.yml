@@ -31,3 +31,6 @@ jobs:
 
     - name: format
       run: make rs_format
+    
+    - name: query 
+      run: make rs_query 
